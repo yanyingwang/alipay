@@ -1,8 +1,6 @@
 # added by yanying:
 
-
-(alipay.trade.refund 接口)[https://doc.open.alipay.com/docs/api.htm?spm=a219a.7386797.0.0.h4K3hA&docType=4&apiId=759]
-
+# [alipay.trade.refund 接口](https://doc.open.alipay.com/docs/api.htm?spm=a219a.7386797.0.0.h4K3hA&docType=4&apiId=759)
 ~~~ruby
 biz_content = { "out_trade_no":"OR20170410170238669669484930",  # 支付时传入的订单号
                 "trade_no":"2017041021001004420200344537",  #  支付宝账号
