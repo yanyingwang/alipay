@@ -1,10 +1,21 @@
+
+
 module Alipay
   module App
     module Service
       ALIPAY_TRADE_APP_PAY_REQUIRED_PARAMS = %w( app_id biz_content notify_url )
+      @@env ||= Rails.env if defined? Rails
+      @@env ||= ENV['RACK_ENV']
+      @@env ||= 'development'
+      case @@env
+      when 'production'
+        @@gateway = 'https://openapi.alipay.com/gateway.do'
+      else
+        @@gateway = "https://openapi.alipaydev.com/gateway.do"
+      end
 
       def self.alipay_trade_refund(params, options = {})
-        conn = Faraday.new(url: "https://openapi.alipaydev.com/gateway.do") do |faraday|
+        conn = Faraday.new(url: @@gateway) do |faraday|
           faraday.request  :url_encoded                                         # form-encode POST params
           faraday.response :logger, ::Logger.new(STDOUT), :bodies => true       # log requests to STDOUT， for debug
           faraday.adapter  Faraday.default_adapter                              # make requests with Net::HTTP
