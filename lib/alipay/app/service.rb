@@ -14,6 +14,16 @@ module Alipay
         @@gateway = "https://openapi.alipaydev.com/gateway.do"
       end
 
+      def self.trade_refund(**params)
+        #biz_content = { out_trade_no: params['out_trade_no'],
+        #                trade_no: params['trade_no'],
+        #                refund_amount: params['refund_amount'],
+        #                refund_reason:params['refund_reason'],
+        #                out_request_no: params['out_request_no'] }
+        Alipay::App::Service.alipay_trade_refund(biz_content: params.to_json,
+                                                 app_id: Alipay.pid)
+      end
+
       def self.alipay_trade_refund(params, options = {})
         conn = Faraday.new(url: @@gateway) do |faraday|
           faraday.request  :url_encoded                                         # form-encode POST params

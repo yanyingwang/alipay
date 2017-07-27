@@ -1,5 +1,17 @@
 # added by yanying:
 
+# trade_refund
+
+~~~ruby
+Alipay::App::Service.trade_refund(out_trade_no: 'OR2017020232342111221',        # 支付时传入的订单号
+                                  trade_no: '20170203242342342424',             # 支付宝账号
+                                  refund_amount: 24.4,                          # 退款金额
+                                  refund_reason: '测试下退款',                  # 退款备注信息
+                                  out_request_no: 'RERF2017020323242423424234') # 请求号
+~~~
+
+
+
 # [alipay.trade.refund 接口](https://doc.open.alipay.com/docs/api.htm?spm=a219a.7386797.0.0.h4K3hA&docType=4&apiId=759)
 ~~~ruby
 biz_content = { "out_trade_no":"OR20170410170238669669484930",  # 支付时传入的订单号
