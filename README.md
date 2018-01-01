@@ -1,3 +1,18 @@
+# Please know that this gem is abandoned.
+abandoned ruby gem please use community version in the following link:
+<https://github.com/chloerei/alipay>
+
+Back to the time that I clone this gem from [another gem](https://github.com/chloerei/alipay) which didn't have the trade_refund API I needed. So I cloned it and added the trade_refund function, but at that time my work is so heavy so that I didn't get the time to submit a pull request to that another gem.
+
+But months passed until now, I notice that another gem already have the [trade_refund](https://github.com/chloerei/alipay/blob/master/doc/quick_start_en.md#refund-payment) function, now. Therefore, I deleted this gem because it doesn't have the meaning of existing.
+
+If you are still using this gem, please check out that another gem I mentioned in the above.
+
+Anyway, please know that this gem is abandoned and I've cleaned up all the codes.
+
+
+
+
 # added by yanying:
 
 # trade_refund
