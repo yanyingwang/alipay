@@ -8,7 +8,7 @@ But months passed until now, I notice that another gem already have the [trade_r
 
 If you are still using this gem, please check out that another gem I mentioned in the above.
 
-Anyway, please know that this gem is abandoned and I've cleaned up all the codes.
+Anyway, please know that this gem is abandoned and I've try to clean up all the codes and prevent somebody using it.
 
 
 
